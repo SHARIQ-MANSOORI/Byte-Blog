@@ -1,12 +1,12 @@
 @import "tailwindcss";
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: light;
+  color: #0f2f57;
+  background-color: #e8f0ff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,54 +16,58 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: #1d4ed8;
+  text-decoration: none;
 }
 a:hover {
-  color: #535bf2;
+  color: #1e40af;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: #e8f0ff;
+  color: #0f2f57;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1, h2, h3, h4 {
+  color: #0f2f57;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+  border-radius: 10px;
+  border: 1px solid #cfe0ff;
+  padding: 0.62em 1.1em;
+  font-size: 0.95rem;
+  font-weight: 600;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #ffffff;
+  color: #1d4ed8;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.2s ease-in-out;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: #eef4ff;
+  border-color: #93c5fd;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 3px solid #bfdbfe;
+  outline-offset: 2px;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #dbeafe;
+    background-color: #0f172a;
   }
-  a:hover {
-    color: #747bff;
+  body {
+    background: #0f172a;
+    color: #dbeafe;
   }
-  button {
-    background-color: #f9f9f9;
+  a {
+    color: #93c5fd;
   }
 }
+

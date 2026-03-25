@@ -24,6 +24,7 @@ export default function RTE({
         render={({ field: { onChange, value } }) => (
           <Editor
             value={value}
+            apiKey={import.meta.env.VITE_TINY_API_KEY}
             init={{
               initial_value: defaultValue,
               height: 500,

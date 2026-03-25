@@ -1,4 +1,5 @@
 import React , {useState , useEffect} from 'react'
+import { Outlet } from 'react-router-dom'
 import {useDispatch} from 'react-redux' 
 import authService from './appwrite/auth'
 import {login , logout} from "./store/authSlice.js"
@@ -21,17 +22,17 @@ function App() {
     })
     .finally(()=> setLoading(false));
   },[])
-  return !loading ? (<div className='min-h-screen flex flex-wrap
-  content-between bg-gray-400'>
-    test
-    <div className='w-full'>
-      <Header/>
-      <main>
-        {/* outlet */}
-      </main>
-      <Footer/>
+  return !loading ? (
+    <div className='min-h-screen flex flex-col justify-between bg-sky-50 text-slate-900'>
+      <div className='w-full max-w-6xl mx-auto p-4'>
+        <Header />
+        <main className='mt-6 rounded-2xl border border-sky-100 bg-white p-6 shadow-sm'>
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </div>
-  </div>) : null;
+  ) : null;
 }
 
 export default App

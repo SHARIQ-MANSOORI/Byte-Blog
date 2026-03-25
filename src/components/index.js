@@ -18,7 +18,7 @@ export {
     Container,
     Logo,
     LogoutBtn,
-    RTE,
+    RTE, 
     Signup,
     Login,
     Button,
